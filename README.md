@@ -9,6 +9,7 @@ Projects I've contributed to in the open source community:
 ## 🚀 My Projects
 
 <!-- LICENSED-PROJECTS:START -->
+- [**spark**](https://github.com/stefanoskapa/spark) `C` — A move generator library for chess engines
 - [**Game-of-Life**](https://github.com/stefanoskapa/Game-of-Life) `JavaScript` ⭐ 1 — An implementation of Conway's Game of Life using HTML, CSS and JavaScript
 - [**amadeus**](https://github.com/stefanoskapa/amadeus) `C` — A UCI chess engine
 - [**PIC12F1840_I2C**](https://github.com/stefanoskapa/PIC12F1840_I2C) `Assembly` — Using the I2C protocol with the PIC12F1840 microcontroller
