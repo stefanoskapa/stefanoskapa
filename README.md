@@ -1,11 +1,3 @@
-## 🌱 Notable Contributions
-
-Projects I've contributed to in the open source community:
-
-- <img src="https://github.com/gradle.png" width="20" height="20" style="border-radius:50%"> [gradle/gradle](https://github.com/gradle/gradle/pulls?q=author:stefanoskapa)
-
----
-
 ## 🚀 My Projects
 
 <!-- LICENSED-PROJECTS:START -->
@@ -22,9 +14,13 @@ Projects I've contributed to in the open source community:
 
 ---
 
-## 💻 Languages
+## 🌱 Contributions
 
-Breakdown of languages I have used:
+- <img src="https://github.com/gradle.png" width="20" height="20" style="border-radius:50%"> [gradle/gradle](https://github.com/gradle/gradle/pulls?q=author:stefanoskapa)
+
+---
+
+## 💻 Languages
 
 ![Languages](languages.svg)
 

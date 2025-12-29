@@ -68,6 +68,9 @@ jobs:
               !repo.fork && 
               repo.license !== null
             );
+
+            // Sort alphabetically by name
+            licensedRepos.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
             
             // Generate markdown
             let markdown = '';
