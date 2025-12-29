@@ -1,10 +1,3 @@
-# Hi there 👋
-
-<!-- Customize this section with your own intro -->
-I'm a software developer passionate about open source. Here's a snapshot of my work:
-
----
-
 ## 🌱 Notable Contributions
 
 Projects I've contributed to in the open source community:
@@ -14,8 +7,6 @@ Projects I've contributed to in the open source community:
 ---
 
 ## 🚀 My Projects
-
-Open source projects I've created:
 
 <!-- LICENSED-PROJECTS:START -->
 - [**amadeus**](https://github.com/stefanoskapa/amadeus) `C` (MIT) — A UCI chess engine
@@ -32,17 +23,9 @@ Open source projects I've created:
 
 ## 💻 Languages
 
-Breakdown of languages across my contributions:
+Breakdown of languages I have used:
 
 ![Languages](languages.svg)
-
----
-
-<!-- Optional: Add links to your socials, blog, etc. -->
-## 📫 Connect with me
-
-- [LinkedIn](https://www.linkedin.com/in/koutsouflakisstefanos/)
-- [Nostr](https://primal.net/p/nprofile1qqs8k3ttt5v9ftdpk8gqtpuaff0h5j78v3t53nmk09arz3j5qdht5ecn2jnd3)
 
 ---
 
