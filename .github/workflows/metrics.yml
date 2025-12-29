@@ -16,31 +16,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Generate Notable Contributions
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: notable-contributions.svg
-          
-          # Basic config
-          user: stefanoskapa
-          template: classic
-          base: ""
-          
-          # Notable contributions plugin
-          plugin_notable: yes
-          plugin_notable_from: all
-          plugin_notable_types: commit, pull_request, issue
-          plugin_notable_indepth: yes
-          plugin_notable_repositories: yes
-          plugin_notable_self: no
-          # Lower the threshold to catch smaller contributions
-          plugin_notable_filter: ".*"
-          # Include all contributions regardless of stars/popularity
-          plugin_notable_contributions: yes
-          # Increase timeout for large repos like Gradle
-          plugin_notable_indepth_custom_repositories: gradle/gradle
-
       - name: Generate Language Stats
         uses: lowlighter/metrics@latest
         with:

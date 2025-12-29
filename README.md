@@ -5,11 +5,11 @@ I'm a software developer passionate about open source. Here's a snapshot of my w
 
 ---
 
-## 🌟 Contributions
+## 🌟 Notable Contributions
 
 Projects I've contributed to in the open source community:
 
-![Notable Contributions](notable-contributions.svg)
+- <img src="https://github.com/gradle.png" width="20" height="20" style="border-radius:50%"> [gradle/gradle](https://github.com/gradle/gradle/pulls?q=author:stefanoskapa)
 
 ---
 
