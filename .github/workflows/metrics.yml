@@ -74,9 +74,8 @@ jobs:
             for (const repo of licensedRepos) {
               const stars = repo.stargazers_count > 0 ? ` ⭐ ${repo.stargazers_count}` : '';
               const lang = repo.language ? ` \`${repo.language}\`` : '';
-              const license = repo.license.spdx_id || repo.license.name;
               const desc = repo.description ? ` — ${repo.description}` : '';
-              markdown += `- [**${repo.name}**](${repo.html_url})${lang}${stars} (${license})${desc}\n`;
+              markdown += `- [**${repo.name}**](${repo.html_url})${lang}${stars}${desc}\n`;
             }
             
             // Read current README

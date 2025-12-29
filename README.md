@@ -5,7 +5,7 @@ I'm a software developer passionate about open source. Here's a snapshot of my w
 
 ---
 
-## 🌟 Notable Contributions
+## 🌱 Notable Contributions
 
 Projects I've contributed to in the open source community:
 
@@ -38,6 +38,7 @@ Breakdown of languages across my contributions:
 ## 📫 Connect with me
 
 - [LinkedIn](https://www.linkedin.com/in/koutsouflakisstefanos/)
+- [Nostr](https://primal.net/p/nprofile1qqs8k3ttt5v9ftdpk8gqtpuaff0h5j78v3t53nmk09arz3j5qdht5ecn2jnd3)
 
 ---
 
