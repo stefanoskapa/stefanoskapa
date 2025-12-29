@@ -30,9 +30,16 @@ jobs:
           # Notable contributions plugin
           plugin_notable: yes
           plugin_notable_from: all
-          plugin_notable_types: commit, pull_request
+          plugin_notable_types: commit, pull_request, issue
           plugin_notable_indepth: yes
           plugin_notable_repositories: yes
+          plugin_notable_self: no
+          # Lower the threshold to catch smaller contributions
+          plugin_notable_filter: ".*"
+          # Include all contributions regardless of stars/popularity
+          plugin_notable_contributions: yes
+          # Increase timeout for large repos like Gradle
+          plugin_notable_indepth_custom_repositories: gradle/gradle
 
       - name: Generate Language Stats
         uses: lowlighter/metrics@latest
@@ -49,6 +56,73 @@ jobs:
           plugin_languages: yes
           plugin_languages_details: lines, bytes-size, percentage
           plugin_languages_sections: most-used
-          plugin_languages_indepth: yes  # Analyzes commits for more accuracy
-          plugin_languages_analysis_timeout: 15
+          plugin_languages_indepth: yes
+          plugin_languages_indepth_custom_repositories_only: no
+          plugin_languages_analysis_timeout: 60
           plugin_languages_limit: 8
+          # Count all files, not just recent commits
+          plugin_languages_recent_load: 500
+          plugin_languages_recent_days: 365
+          commits_authoring: stefanoskapa, koutsouflakis.stefanos@gmail.com, koutsouflakis.stefanos@proton.me
+
+  licensed-projects:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Generate Licensed Projects List
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.METRICS_TOKEN }}
+          script: |
+            const fs = require('fs');
+            
+            // Fetch all repos owned by the user
+            const repos = await github.paginate(github.rest.repos.listForAuthenticatedUser, {
+              affiliation: 'owner',
+              sort: 'updated',
+              per_page: 100
+            });
+            
+            // Filter to only public repos with a license
+            const licensedRepos = repos.filter(repo => 
+              !repo.private && 
+              !repo.fork && 
+              repo.license !== null
+            );
+            
+            // Generate markdown
+            let markdown = '';
+            for (const repo of licensedRepos) {
+              const stars = repo.stargazers_count > 0 ? ` ⭐ ${repo.stargazers_count}` : '';
+              const lang = repo.language ? ` \`${repo.language}\`` : '';
+              const license = repo.license.spdx_id || repo.license.name;
+              const desc = repo.description ? ` — ${repo.description}` : '';
+              markdown += `- [**${repo.name}**](${repo.html_url})${lang}${stars} (${license})${desc}\n`;
+            }
+            
+            // Read current README
+            let readme = fs.readFileSync('README.md', 'utf8');
+            
+            // Replace content between markers
+            const startMarker = '<!-- LICENSED-PROJECTS:START -->';
+            const endMarker = '<!-- LICENSED-PROJECTS:END -->';
+            const regex = new RegExp(`${startMarker}[\\s\\S]*${endMarker}`, 'g');
+            
+            if (readme.includes(startMarker)) {
+              readme = readme.replace(regex, `${startMarker}\n${markdown}${endMarker}`);
+            }
+            
+            fs.writeFileSync('README.md', readme);
+            console.log(`Found ${licensedRepos.length} licensed projects`);
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update licensed projects list"
+          git push
