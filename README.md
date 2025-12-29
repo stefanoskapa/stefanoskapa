@@ -18,7 +18,10 @@ Projects I've contributed to in the open source community:
 Open source projects I've created:
 
 <!-- LICENSED-PROJECTS:START -->
-<!-- This section is auto-generated — do not edit manually -->
+- [**arrg**](https://github.com/stefanoskapa/arrg) `C` (MIT) — A portable argument parser library
+- [**brace**](https://github.com/stefanoskapa/brace) `C` (MIT) — A utility for verifying balanced symbols in text files. Checks matching pairs like {}, (), and supports custom user-defined sequences.
+- [**sll**](https://github.com/stefanoskapa/sll) `C` (MIT)
+- [**SudokuBase**](https://github.com/stefanoskapa/SudokuBase) `Java` ⭐ 2 (MIT) — An online platform for sudoku
 <!-- LICENSED-PROJECTS:END -->
 
 ---
