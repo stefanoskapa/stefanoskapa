@@ -24,7 +24,6 @@ Open source projects I've created:
 - [**tiny1**](https://github.com/stefanoskapa/tiny1) `Java` — A lightweight easy-to-use http-server for static content
 - [**brace**](https://github.com/stefanoskapa/brace) `C` — A utility for verifying balanced symbols in text files.
 - [**arrg**](https://github.com/stefanoskapa/arrg) `C` — A portable argument parser library
-- [**sll**](https://github.com/stefanoskapa/sll) `C`
 - [**SudokuBase**](https://github.com/stefanoskapa/SudokuBase) `Java` ⭐ 2 — An online platform for sudoku
 <!-- LICENSED-PROJECTS:END -->
 
