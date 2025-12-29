@@ -1,14 +1,25 @@
 # Hi there 👋
 
+<!-- Customize this section with your own intro -->
 I'm a software developer passionate about open source. Here's a snapshot of my work:
 
 ---
 
-## 🌟 Notable Contributions
+## 🌟 Contributions
 
 Projects I've contributed to in the open source community:
 
 ![Notable Contributions](notable-contributions.svg)
+
+---
+
+## 🚀 My Projects
+
+Open source projects I've created:
+
+<!-- LICENSED-PROJECTS:START -->
+<!-- This section is auto-generated — do not edit manually -->
+<!-- LICENSED-PROJECTS:END -->
 
 ---
 
@@ -20,10 +31,10 @@ Breakdown of languages across my contributions:
 
 ---
 
+<!-- Optional: Add links to your socials, blog, etc. -->
 ## 📫 Connect with me
 
 - [LinkedIn](https://www.linkedin.com/in/koutsouflakisstefanos/)
-- [Twitter](https://twitter.com/YOUR_HANDLE)
 
 ---
 
